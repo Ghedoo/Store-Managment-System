@@ -72,7 +72,7 @@ function addProduct() {
 function displayProducts(arr) {
   var box = ``;
   for (var i = 0; i < arr.length; i++) {
-    box += `<div class="col-lg-4 col-md-6 col-sm-12">
+    box += `<div class="col-lg-6 col-md-6 col-sm-12">
         <div class="card border-0 shadow-lg mb-3" >
           <img src="${arr[i].image}" class="card-img-top" alt="...">
           <div class="card-body">
