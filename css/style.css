@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../imag/back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+
+    height: 120vh;
+
+}
+
+.form-control {
+    border: 0;
+    border-bottom: 1px solid #777;
+    box-shadow: none;
+    width: 50%;
+    background-color: transparent;
+
+}
+
+.form-control {
+  background-color: transparent !important; /* مهم لأنه يتجاوز ستايل Bootstrap */
+  border: 1px solid #ccc; /* أو حسب ما بدك */
+  color:#b4b0b0 !important; /* لون النص */
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #b4b0b0 !important;
+  transition: background-color 5000s ease-in-out 0s; /* مهم لإجبار المتصفح على الشفافية */
+}
+
+input:-moz-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -moz-text-fill-color: white !important;
+}
+
+.gradient-text {
+  display: inline-block; /* مهم جدًا */
+  background: linear-gradient(20deg, #eee , #777);
+
+  background-clip: text; /* الخاصية القياسية */
+  -webkit-background-clip: text; /* الخاصية الخاصة بالمتصفحات */
+
+  -webkit-text-fill-color: transparent; /* مهم لتظهر الخلفية */
+}
+
+#searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* ضع أي لون تحبه */
+  opacity: 1; /* بعض المتصفحات تقلل الشفافية بشكل افتراضي */
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(250, 246, 246, 0.3);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+.btn {
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
