@@ -93,7 +93,7 @@ function clearInputs() {
 function displayProducts(arr) {
   var box = ``;
   for (var i = 0; i < arr.length; i++) {
-    box += `<div class="col-lg-6 col-md-6 col-sm-12">
+box += `<div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card border-0 shadow-lg mb-3" >
   <img src="${arr[i].image}" class="card-img-top" alt="...">
   <div class="card-body">
@@ -158,19 +158,25 @@ function updateProduct() {
     price: productPriceInput.value,
     category: productCategoryInput.value,
     description: productDescriptionInput.value,
-    image: productList[editIndex].image // الصورة القديمة
+ 
+    image: productImageInput.files[0] 
+           ? 'imag/' + productImageInput.files[0].name 
+           : productList[editIndex].image
   };
 
-  // حفظ التعديلات في المصفوفة
+ 
   productList[editIndex] = updatedProduct;
 
-  // إعادة عرض الكروت
+
+  localStorage.setItem("products", JSON.stringify(productList));
+
+
   displayProducts(productList);
 
-  // تنظيف الفورم
+
   clearInputs();
 
-  // إرجاع الأزرار للوضع الطبيعي
+
   updateBtn.classList.add("d-none");
   addBtn.classList.remove("d-none");
   editIndex = null;
