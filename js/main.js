@@ -95,7 +95,7 @@ function displayProducts(arr) {
   for (var i = 0; i < arr.length; i++) {
 box += `<div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card border-0 shadow-lg mb-3" >
-  <img src="${arr[i].image}" class="card-img-top" alt="...">
+  <img src="${arr[i].imag}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${arr[i].name}</h5>
     <p class="card-text">${arr[i].description}</p>
