@@ -69,3 +69,18 @@ input:-moz-autofill {
 .btn:hover {
   transform: scale(1.05);
 }
+.stylo{
+  background-color: rgba(235, 228, 228, 0.8);
+  border: 0px  ;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(243, 239, 239, 0.5);
+  padding: 10px 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 5px;
+  text-align: center;
+
+}
+.alert{
+  width: 60%;
+}

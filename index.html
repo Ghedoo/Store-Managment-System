@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
- 
+   <link rel="icon" href="imag/url.png">
     <title>Store Management System</title>
 </head>
 <body >
@@ -20,34 +20,44 @@
     <h1 class="text-start mb-5 fw-bold text-white gradient-text">Store Management System</h1>
 
 <div class="form-floating mb-3 ">
-  <input type="text" class="form-control border-0 border-bottom shadow-none w-50 nn " id="productName" placeholder="Product Name">
+
+  <input oninput="validateForm(this)" type="text" class=" form-control border-0 border-bottom shadow-lg w-50  " id="productName" placeholder="Product Name">
+  <div class="alert stylo d-none "> ' name must start with a capital letter.'</div>
   <label for="productName" class="text-white ">Product Name</label>
 </div>
 
 <div class="form-floating mb-3">
-  <input type="number" class="form-control border-0 border-bottom shadow-none w-50" id="productPrice" placeholder="Product Price">
+  <input oninput="validateForm(this)" type="number" class="form-control border-0 border-bottom shadow-none w-50" id="productPrice" placeholder="Product Price">
+  <div class="alert stylo  d-none "> Price must be a number between 100 and 100000..</div>
+
   <label for="productPrice" class="text-white">Product Price</label>
 </div>
 
 <div class="form-floating mb-3">
-  <input type="text" class="form-control border-0 border-bottom shadow-none w-50" id="productCategory" placeholder="Product Category">
+  <input oninput="validateForm(this)" type="text" class="form-control border-0 border-bottom shadow-none w-50" id="productCategory" placeholder="Product Category">
+
+  <div class="alert stylo d-none "> category must be one of the following: Mobile, Laptop, Tablet, Smart Watch.</div>
   <label for="productCategory" class="text-white">Product Category</label>
 
 </div>
 
 <div class="form-floating mb-3">
-  <input type="text" class="form-control border-0 border-bottom shadow-none w-50" id="productDescription" placeholder="Product Description">
+  <input oninput="validateForm(this)" type="text" class="form-control border-0 border-bottom shadow-none w-50" id="productDescription" placeholder="Product Description">
+  <div class="alert  stylo d-none ">Your product description must be between 4 and 300 characters long.</div>
+
   <label for="productDescription" class="text-white">Product Description</label>
 </div>
 
 <div class="form-floating mb-3">
-  <input type="file" class="form-control border-0 border-bottom shadow-none w-50" id="productImage" placeholder="Product Image">
+  <input oninput="validateForm(this)" type="file" class="form-control border-0 border-bottom shadow-none w-50" id="productImage" placeholder="Product Image">
+   <div class="alert stylo d-none ">Your product image must be a valid image file.</div>
+
   <label for="productImage" class="text-white py-2">Product Image</label>
 </div>
 
 
 <button onclick="addProduct()" id="addBtn"  class="btn btn-outline-secondary">Add Product</button>
-<button onclick="updateProduct()" id="updateBtn" class="btn btn-light d-none">Update Product</button>
+<button onclick="updateProduct()" id="updateBtn" class="btn btn-warning d-none">Save Changes</button>
     </div>
 
 </section>
