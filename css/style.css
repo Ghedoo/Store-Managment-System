@@ -6,7 +6,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: repeat-y;
-    height: 120vh;
+    height: 100vh;
 
 }
 
@@ -88,25 +88,13 @@ body{
     }
 
 .form-control {
-    border: 0;
-    border-bottom: 1px solid #777;
-    box-shadow: none;
-    width: 50%;
-    background-color: transparent;
-
+  border: 1px solid #ccc;
+  box-shadow: none;
+  width: 50%;
+  background-color: transparent !important;
+  color:#b4b0b0 !important;
 }
 
-.form-control {
-  background-color: transparent !important; /* مهم لأنه يتجاوز ستايل Bootstrap */
-  border: 1px solid #ccc; /* أو حسب ما بدك */
-  color:#b4b0b0 !important; /* لون النص */
-}
-
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-  -webkit-text-fill-color: #b4b0b0 !important;
-  transition: background-color 5000s ease-in-out 0s; /* مهم لإجبار المتصفح على الشفافية */
-}
 
 input:-moz-autofill {
   box-shadow: 0 0 0 1000px transparent inset !important;
@@ -159,4 +147,34 @@ input:-moz-autofill {
 }
 .alert{
   width: 60%;
+}
+
+/* إضافة تأثير fade للخروج */
+input.is-valid, input.is-invalid {
+  transition: opacity 0.5s ease;
+}
+#rowData {
+  margin-top: 5px;
+  max-height: 70vh; /* الحد الأقصى لارتفاع القسم */
+  overflow-y: auto; /* تفعيل الـ scroll عمودي */
+  padding-right: 10px; /* مساحة بسيطة للـ scrollbar */
+  scroll-behavior: smooth; /* حركة ناعمة عند السكروول */
+}
+#rowData::-webkit-scrollbar {
+  width: 5px;
+}
+#rowData::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important; /* خلفية شفافة */
+  -webkit-text-fill-color: #b4b0b0 !important; /* لون النص حسب التصميم */
+  transition: background-color 5000s ease-in-out 0s; /* يحافظ على اللون */
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
