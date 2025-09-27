@@ -15,6 +15,19 @@ var addBtn = document.getElementById("addBtn");
 var updateBtn = document.getElementById("updateBtn");
 var editIndex ;
 
+    window.addEventListener("load", () => {
+      const loadingScreen = document.getElementById("loadingScreen");
+      const phone = document.querySelector(".phone");
+
+      setTimeout(() => {
+        phone.style.opacity = "0"; // يخفي الأيقونة أولاً
+        setTimeout(() => {
+          loadingScreen.classList.add("hidden"); // يبدأ الانقسام + الذوبان
+          setTimeout(() => loadingScreen.remove(), 1500); // إزالة نهائية
+        }, 300);
+      }, 2500);
+    });
+
 // تعريف قائمة المنتجات
 var productList;
 if( localStorage.getItem("products")!=null ) {
